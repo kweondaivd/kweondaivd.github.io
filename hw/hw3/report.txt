@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html><head><title>report</title>
+
+<meta charset="gbk">
+<style type="text/css" >
+body {
+                height:467px;
+                background:#528b8b;
+                color:white;
+                background-attachment:fixed;
+                font-size:30px;
+             
+                
+                text-align:left;
+                
+        }
+#header {
+                      margin-left:1px;
+                       background:black;
+                      background-attachment:fixed;
+                      height:50px;
+                       
+                       font-size:16px;
+                   
+                      
+                       text-align:center;
+                       background-position:absolute;
+                        
+                       }
+
+iframe body  {
+                   background:white;
+                  color:black;
+                  font-size:17px;
+                  font-family:Marlgun Gothic;
+                  pedding:30px;
+                  margin-top:30px;
+                  border:1px solid black;
+                  height:600px;
+ }
+                  
+                          
+                 
+
+</style>
+
+</head>
+<body>
+<div id="header"><a href="http://kweondaivd.github.io" target="_top"><img src="./img/head.jpg" alt="head" title="to_main_page"</img></a></div>
+
+<h1 style="text-align:center">这是个秘密</h1>
+<div>答案是<u>2674</u>首先我进去网页中发现一个input框,抱着试一试的心态,输入了一个0000,弹出了一个Invaild Decrytion Key,decrytion我先查了下意思,是加密,看来这次的题跟解密有关,看了一下<a href="js.html">网页中javascript代码部分</a>,可以发现好长的一段代码,看的我头昏脑胀...我实在放弃了从头分析到尾的想法,但只是这么一说,我还是 大体看了一下出现了md5,base64,url等常用的加密手段,我直接用这些加密法的解密器解密了一下在title标签中出现的怪怪的一串字符,发现普通的手段很难猜测,似乎需要去掉特定字符或者以某种形式先转化一下才能解密,但突然发现代码的前面有一个函数decrypt()的if(!b){alert("Invaild Decrytion Key","Tips");}这不正是刚才弹出来的东东嘛,那说明关键就在这个函数,如果b是false就弹出刚才的东东,看下decrypt的原型(左下),明显a就是我输入的数,我便对"0000"到"9999"的a循环执行try...catch语句,并用if语句构造break,并把break时的a打出来,运行了一下,哈哈竟然解了出来。(改造的代码在右下)</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<html>
+<head><title>report  index</title>
+<meta charset="gbk">
+<style type="txt/css">
+body {
+                height:867px;
+                background:#528b8b;
+                color:white;
+                background-attachment:fixed;
+                font-size:30px;
+             
+                
+                text-align:left;
+                }
+pre  {
+                   background:white;
+                  color:black;
+                  font-size:17px;
+                  font-family:Marlgun Gothic;
+                  pedding:30px;
+                  margin-top:30px;
+                  border:1px solid black;
+ }
+                  
+</style></head>
+<frameset rows="500,*">
+<frame src="./report.html">
+</frameset>
+<body>
+<pre><div onmouseover="mOver(this)" onmouseout="mOut(this)">问题分析代码,请把鼠标移到这里</div></pre>
+
+<script>
+function mOver(obj){ obj.innerHTML="function decrypt(a) {
+    if (a != "" && a != null) {
+        if (decryptElementId.constructor != Array) {
+            decryptElementId = [decryptElementId]
+        }
+        var b = false;
+        for (var i = 0; i < decryptElementId.length; i++) {
+            var c = document.getElementById(decryptElementId[i]);
+            var d = c.title;
+            for (a = "0000"; a <= "9999"; a++) {
+                try {
+
+                    var e = GibberishAES.dec(d, a);
+                    b = true;
+                    c.innerHTML = e;
+                    c.title = "";
+
+                } catch(err) {}
+                if (b == true) {
+                    alert(a);
+                    break;
+                }
+            }
+        }
+        if (!b) {
+            alert("Invalid decryption key", "Tips")
+        }
+    }
+}"
+}
+function mOut(obj){ obj.innerHTML=" function decrypt(a) {
+    if (a != "" && a != null) {
+        if (decryptElementId.constructor != Array) {
+            decryptElementId = [decryptElementId]
+        }
+        var b = false;
+        for (var i = 0; i < decryptElementId.length; i++) {
+            var c = document.getElementById(decryptElementId[i]);
+            var d = c.title;
+            try {
+                var e = GibberishAES.dec(d, a);
+                b = true;
+                c.innerHTML = e;
+                c.title = ""
+            } catch(err) {}
+        }
+        if (!b) {
+            alert("Invalid decryption key", "Tips")
+        }
+    }
+}"
+}
+</script>
+
+
+</body>
+      </frameset>
+</frameset>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html><head><title>report</title>
+<meta content="text/html" charset="gbk"></meta>
+
+<style type="text/css">
+body {
+                background:#528b8b;
+                color:white;
+                background-attachment:fixed;
+                font-size:20px;
+                margin-top:30px;
+                pedding:30px;
+                font-family:batang;
+        }
+b {
+                           align-text:center;
+                           font-size:60px;
+                          
+                 }
+</style>
+</head>
+<body>
+<b>基础练习1</b>
+<div>答案是<u>undefined</u>因为arguments数组指向实参而getNum返回的this.num由于num还未被定义所以是undefined</div>
+<br/><br/><b>基础练习2</b>
+<div>答案是<u>undefined</u>因为我觉得bar只是刚创建空对象并没有立即执行this.x=x语句所以是undefined</div> 
+<br/><br/><b>基础练习3</b>
+<div>答案是<u>function</u>因为bar()里面包含局部变量所以可以肯定它只是函数说以是function</div>
+<br/><br/><b>基础练习4</b>
+<div>答案是<u>alert(go())显示3 , alert(foo.baz.bar())显示1</u>原因吧,我觉得go()是和最初赋值的x在同一个框架内所以this指的是3,而foo.baz.bar由于层层的赋值使x变成了1~~</div>
+<br/><br/><b>基础练习5</b>
+<div>答案是<u>object</u>因为aaa()里面有一个return函数,这不是返回值的return函数而是赋值功能的,所以aaa()构成了个对象即object.</div>
+</body>
+</html>
