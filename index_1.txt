@@ -1,27 +1,21 @@
 <html>
 <head><title>orzing</title>
-<script>
-
-</script>
 <style type="text/css">
 body {
-                background:#000033;
+                background:#528B8B;
                 background-attachment:fixed;    
                 margin-top:0px auto;
-				height:900px;
-				width:1685px;
+				
       }
 
                
       
 #menu {
                float:left;
-               width:430px;
-               height:850px;
+               width:390px;
+               height:90%;
                font-size:30px;
                text-align:center;
-			   background:#000033;
-			   background-image:url(img/menghuan2.jpg);
 			   
 			   
        }
@@ -29,62 +23,53 @@ body {
                float:left;
                width:430px;
                height:150px;
-			  
-			   
+               background-image:url(img/xingkong3.jpg);
                color:#FCF;
                margin-top:0px;
-               padding-top:85px;
+               padding-top:54px;
                text-align:center;
 			   font-size:40px;
          }
-.btn   {
-	        float:left;
-			 height:45px;
-			 width:430px;
-			 color:#FFFFFF;
-			 text-align:center;
-			 padding:10px;
-			 background:#000033;
-			 transition:1s;
-			 border:1px inset white;
-			 font-size:25px;
-}
-.btn:hover  { 
-                height:90px;
-				width:430px;
-				background:#9CF;
-				color:#003;
-								
-}
-
- #footer {
-	          height:50px;
-			  width:1600;
-			  text-align:center;
-			  font-size:16px;
-			  color:white;
-			  padding:17px;
-			  border:1px groove white;
+ 
+   ul  { color:white;text-align:center;}      
+ li  { text-align:left;}
+#rect1 {
+	      width:50px;
+		  margin:auto;
+		  color:#FF99CC;
+		  float:left;
+		  
+		  
  }
-img  {margin-left:5px;}
-
+ #rect2 {
+	        width:130px;
+			
+			 color:#FC0;
+			float:left;
+			text-align:left;
+ }
+ #rect3  {
+	         width:250px;
+			 color:#FC0;
+			float:left;
+			 text-align:center;
+			 
+ }
 </style>
 </head>
 <body>
  <div id="menu"><div id="header">WELCOME!</div>
-    <button class="btn" value="Intro" onMouseOver='this.innerHTML="Click the Sun!"' onMouseOut='this.innerHTML="Intro"'>Intro</button>
-    <br/>
-   <button class="btn" value="Homework" onMouseOver='this.innerHTML="Click the Mercury"' onMouseOut='this.innerHTML="Homework"'>Homework</button><br/>
-   <button class="btn" value="Tech" onMouseOver='this.innerHTML="Click the Venus!"' onMouseOut='this.innerHTML="Tech"'>Tech</button><br/>
-   <button class="btn" value="Game" onMouseOver='this.innerHTML="Click the Earth!"' onMouseOut='this.innerHTML="Game"'>Game</button><br/>
-        
+    
+        <div id="rect2"><b>Sun<br/>Mercury Venus<br/>Earth<br/>Mars<br/>Jupiter<br/>Satrun<br/>Uranus<br/>Neptune<br/>Pluto</b></div>
+          <div id="rect1">-><br/>-><br/>-><br/>-><br/>-><br/>-><br/>-><br/>-><br/>-><br/>-></div>
+          <div id="rect3">intro<br/>homework<br/>tech<br/>game<br/>..<br/>..<br/>..<br/>..<br/>..<br/>..</div>
        
 
      
 
-</div>
+    </div>
  <map name="planetmap" id="planetmap">
- <img src="./img/index2.jpg" height="850" width="1200"  usemap="#planetmap"  alt="Planets" />
+ <img src="./img/index2.jpg"  usemap="#planetmap"  alt="Planets" />
 <area title="Introduction" shape="rect"1 coords="0,0,178,700" href="introduction.html" target="_blank" alt="introduction" />
  <area title="Homework" shape="circle" coords="218,407,18" href="./hw/hw1.zip" target="_blank" alt="homework" />
  <area title="Journal" shape="circle" coords="314,366,24" href="./journal/jnlist.html" target="_blank" alt="journal" />
@@ -96,6 +81,6 @@ img  {margin-left:5px;}
 <area title="BUILDING" shape="circle" coords="1040,70,37" href="building.html" target="_blank" alt="building" />
 <area title="BUILDING" shape="circle" coords="1120,20,13" href="building.html" target="_blank" alt="building" />                               
 </map>
-<div id="footer">Powered By Dv<br/>Welcome Any Advice</div>
+
 </body>
 </html>   
