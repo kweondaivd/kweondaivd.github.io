@@ -8,16 +8,16 @@ body {
                 background:#000033;
                 background-attachment:fixed;    
                 margin-top:0px auto;
-				height:900px;
-				width:1685px;
+				height:100%;
+				width:100%;
       }
 
-               
+
       
 #menu {
                float:left;
-               width:430px;
-               height:850px;
+               width:24%;
+               height:93%;
                font-size:30px;
                text-align:center;
 			   background:#000033;
@@ -27,15 +27,16 @@ body {
        }
 #header {
                float:left;
-               width:430px;
-               height:150px;
+               width:24%;
+               height:10%;
 			  
 			   
-               color:#FCF;
+               color:white;
                margin-top:0px;
-               padding-top:85px;
+               padding:20%;
+			   padding-left:125px;
                text-align:center;
-			   font-size:40px;
+			   `
          }
 .btn   {
 	        float:left;
@@ -48,6 +49,7 @@ body {
 			 transition:1s;
 			 border:1px inset white;
 			 font-size:25px;
+			 margin-left:10px;
 }
 .btn:hover  { 
                 height:90px;
@@ -58,25 +60,60 @@ body {
 }
 
  #footer {
-	          height:50px;
-			  width:1600;
+	          height:5%;
+			  background:#000033;
+			  width:97.4%;
 			  text-align:center;
 			  font-size:16px;
 			  color:white;
 			  padding:17px;
 			  border:1px groove white;
+			  clear:both;
  }
-img  {margin-left:5px;}
+ #list {
+	        width:135px;
+			height:840px;
+			text-align:center;
+			font-size:10px;
+			background:white;
+			color:#000033;
+			padding:5px;
+			float:right;
+ }
+img  {margin-left:5px;width:75%;}
+-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+h1 { 
+	font: bold 200% Consolas, Monaco, monospace;
+	border-right: .1em solid;
+	width: 16.5em; /* fallback */
+	width: 30ch; /* # of chars */
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 20s steps(30, end), /* # of steps = # of chars */
+	           blink-caret .5s step-end infinite alternate;
+}
+
+
 
 </style>
 </head>
 <body>
- <div id="menu"><div id="header">WELCOME!</div>
+ <div id="menu"><div id="header" >WELCOME!</div>
     <button class="btn" value="Intro" onMouseOver='this.innerHTML="Click the Sun!"' onMouseOut='this.innerHTML="Intro"'>Intro</button>
     <br/>
    <button class="btn" value="Homework" onMouseOver='this.innerHTML="Click the Mercury"' onMouseOut='this.innerHTML="Homework"'>Homework</button><br/>
    <button class="btn" value="Tech" onMouseOver='this.innerHTML="Click the Venus!"' onMouseOut='this.innerHTML="Tech"'>Tech</button><br/>
-   <button class="btn" value="Game" onMouseOver='this.innerHTML="Click the Earth!"' onMouseOut='this.innerHTML="Game"'>Game</button><br/>
+   <button class="btn" value="Journal" onMouseOver='this.innerHTML="Click the Earth!"' onMouseOut='this.innerHTML="Journal"'>Journal</button><br/>
+    <button class="btn" value="Game" onMouseOver='this.innerHTML="Click the Mars!"' onMouseOut='this.innerHTML="Game"'>Game</button><br/>
+     <button class="btn" value="null" onMouseOver='this.innerHTML="Click the Jupiter!"' onMouseOut='this.innerHTML="BuildingPart1"'>BuildingPart1</button><br/>
+      <button class="btn" value="null" onMouseOver='this.innerHTML="Click the Saturn!"' onMouseOut='this.innerHTML="BuildingPart2"'>BuildingPart2</button><br/>
+       <button class="btn" value="null" onMouseOver='this.innerHTML="Click the Uranus!"' onMouseOut='this.innerHTML="BuildingPart3"'>BuildingPart3</button><br/>
+        <button class="btn" value="null" onMouseOver='this.innerHTML="Click the Neptune!"' onMouseOut='this.innerHTML="BuildingPart4"'>BuildingPart4</button><br/>
+        <button class="btn" value="null" onMouseOver='this.innerHTML="Click the Pluto!"' onMouseOut='this.innerHTML="BuildingPart5"'>BuildingPart5</button><br/>
+        
         
        
 
@@ -84,7 +121,7 @@ img  {margin-left:5px;}
 
 </div>
  <map name="planetmap" id="planetmap">
- <img src="./img/index2.jpg" height="850" width="1200"  usemap="#planetmap"  alt="Planets" />
+ <img src="./img/index2.jpg" height="93%" width="73%"  usemap="#planetmap"  alt="Planets" />
 <area title="Introduction" shape="rect"1 coords="0,0,178,700" href="introduction.html" target="_blank" alt="introduction" />
  <area title="Homework" shape="circle" coords="218,407,18" href="./hw/hw1.zip" target="_blank" alt="homework" />
  <area title="Journal" shape="circle" coords="314,366,24" href="./journal/jnlist.html" target="_blank" alt="journal" />
@@ -96,6 +133,15 @@ img  {margin-left:5px;}
 <area title="BUILDING" shape="circle" coords="1040,70,37" href="building.html" target="_blank" alt="building" />
 <area title="BUILDING" shape="circle" coords="1120,20,13" href="building.html" target="_blank" alt="building" />                               
 </map>
+<!--<div id="list"><table><tr>Most favorite site:</tr>
+ <tr><td><a href="www.baidu.com">Baidu</a></td></tr>
+ <tr><td><a href="w3school.com">w3school</a></td></tr>
+ <tr><td><a href="kdisk.co.kr">kdisk</a></td></tr>
+ <tr><td><a href="#">...</a></td></tr>
+ <tr><td><a href="#">...</a></td></tr>
+ <tr><td><a href="#">...</a></td></tr>
+ <tr><td><a href="#">...</a></td></tr>
+ </table></div>-->
 <div id="footer">Powered By Dv<br/>Welcome Any Advice</div>
 </body>
 </html>   
