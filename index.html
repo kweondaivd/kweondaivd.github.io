@@ -1,7 +1,7 @@
 <html>
 <head><title>orzing</title>
 <script>
-
+var marcury= '';
 </script>
 <style type="text/css">
 body {
@@ -25,42 +25,43 @@ body {
 			   
 			   
        }
-#header {
-               float:left;
-               width:24%;
-               height:10%;
-			  
+
+#am_list {
+	           list-style:none;
 			   
-               color:white;
-               margin-top:0px;
-               padding:20%;
-			   padding-left:125px;
-               text-align:center;
-			   `
-         }
+}
+
 .btn   {
 	        float:left;
 			 height:45px;
 			 width:430px;
-			 color:#FFFFFF;
-			 text-align:center;
+			 
+			 text-align:left;
+			 border-radius:15px;
 			 padding:10px;
-			 background:#000033;
+			 	color:#FFFFFF;
+			 background:#000033;		
 			 transition:1s;
-			 border:1px inset white;
+			 border-style:inset;
+			 border-color:#000033 #000 #CCF #000033;
 			 font-size:25px;
 			 margin-left:10px;
+			 clear:both;
 }
 .btn:hover  { 
-                height:90px;
-				width:430px;
-				background:#9CF;
+                height:180;
+				
+				 background:#9CF;
 				color:#003;
-								
+					
 }
 
+
+				  
+	            
+
  #footer {
-	          height:5%;
+	          height:4%;
 			  background:#000033;
 			  width:97.4%;
 			  text-align:center;
@@ -68,6 +69,7 @@ body {
 			  color:white;
 			  padding:17px;
 			  border:1px groove white;
+			  
 			  clear:both;
  }
  #list {
@@ -80,49 +82,55 @@ body {
 			padding:5px;
 			float:right;
  }
-img  {margin-left:5px;width:75%;}
--webkit-keyframes typing { from { width: 0; } }
+img  {margin-left:5px;width:75%;height:93%;}
+@-webkit-keyframes typing { from { width: 0; } }
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
-
-h1 { 
+@-webkit-keyframes rbfont {0%{color:#C00;} 10%{color:#F60;} 20% {color:#FF0;} 30% {color:#9F0;} 40% {color:#0FF;} 50% {color:#06F;} 60% {color:#00F;} 70% { color:#66F;} 80% {color:#60F;} 90% {color:#609;} 100%{color:#006;}}
+#typing { 
+    color:white;
+	text-align:center;
+	font-size:30px;
 	font: bold 200% Consolas, Monaco, monospace;
 	border-right: .1em solid;
-	width: 16.5em; /* fallback */
-	width: 30ch; /* # of chars */
+	padding-left:15px;
+	width: 16.5em; 
+	width: 9ch; 
 	margin: 2em 1em;
 	white-space: nowrap;
 	overflow: hidden;
-	-webkit-animation: typing 20s steps(30, end), /* # of steps = # of chars */
-	           blink-caret .5s step-end infinite alternate;
+	-webkit-animation: typing 8s steps(9, end), 
+	           blink-caret .5s step-end infinite alternate,rbfont 8s infinite alternate;
+	
+	-webkit-animation-play-state:running;
 }
 
+#typing:hover { 
+      -webkit-animation-play-state:paused;
+	              
+	             
+}
 
 
 </style>
 </head>
 <body>
- <div id="menu"><div id="header" >WELCOME!</div>
-    <button class="btn" value="Intro" onMouseOver='this.innerHTML="Click the Sun!"' onMouseOut='this.innerHTML="Intro"'>Intro</button>
-    <br/>
-   <button class="btn" value="Homework" onMouseOver='this.innerHTML="Click the Mercury"' onMouseOut='this.innerHTML="Homework"'>Homework</button><br/>
-   <button class="btn" value="Tech" onMouseOver='this.innerHTML="Click the Venus!"' onMouseOut='this.innerHTML="Tech"'>Tech</button><br/>
-   <button class="btn" value="Journal" onMouseOver='this.innerHTML="Click the Earth!"' onMouseOut='this.innerHTML="Journal"'>Journal</button><br/>
-    <button class="btn" value="Game" onMouseOver='this.innerHTML="Click the Mars!"' onMouseOut='this.innerHTML="Game"'>Game</button><br/>
-     <button class="btn" value="null" onMouseOver='this.innerHTML="Click the Jupiter!"' onMouseOut='this.innerHTML="BuildingPart1"'>BuildingPart1</button><br/>
-      <button class="btn" value="null" onMouseOver='this.innerHTML="Click the Saturn!"' onMouseOut='this.innerHTML="BuildingPart2"'>BuildingPart2</button><br/>
-       <button class="btn" value="null" onMouseOver='this.innerHTML="Click the Uranus!"' onMouseOut='this.innerHTML="BuildingPart3"'>BuildingPart3</button><br/>
-        <button class="btn" value="null" onMouseOver='this.innerHTML="Click the Neptune!"' onMouseOut='this.innerHTML="BuildingPart4"'>BuildingPart4</button><br/>
-        <button class="btn" value="null" onMouseOver='this.innerHTML="Click the Pluto!"' onMouseOut='this.innerHTML="BuildingPart5"'>BuildingPart5</button><br/>
-        
+ <div id="menu"><div id="typing" >Hey Guys!</div>
+   <button class="btn">Intro<br/><a href="introduction.html">Intro</a></button><br/>
+   <button class="btn" >Homework<br/><a href="index.html">Homework1</a><br/><a href="./hw/hw2.html">Homework2</a><br/><a href="./hw/hw3/indexofreport.html">Homework3</a><br/><a href="./hw/hw4/newlb.html">Homework4</a></button><br/>
+   <button class="btn">Videos & Downloads<br/><a href="building.html">Videos & Downloads</a></button><br/>
+   <button class="btn">Journal<br/><a href="journal/journal1.html">Journal1</a></button><br/>
+   <button class="btn">Game<br/><a href="game/index.html">Whack a mole</a></button><br/>
+    
+</div>        
         
        
 
      
-
-</div>
+<img src="img/huangye.jpg"><video src="video/TQCinematic.ogv" autoplay controls="controls" style="width:600px;height:400px;position:absolute;right:80px;top:25px;"></video></img>
+<!--
  <map name="planetmap" id="planetmap">
- <img src="./img/index2.jpg" height="93%" width="73%"  usemap="#planetmap"  alt="Planets" />
-<area title="Introduction" shape="rect"1 coords="0,0,178,700" href="introduction.html" target="_blank" alt="introduction" />
+  <img src="./img/index2.jpg" height="93%" width="73%"  usemap="#planetmap"  alt="Planets" />
+<area title="Introduction" shape="rect" coords="0,0,170,750" href="introduction.html" target="_blank" alt="introduction" />
  <area title="Homework" shape="circle" coords="218,407,18" href="./hw/hw1.zip" target="_blank" alt="homework" />
  <area title="Journal" shape="circle" coords="314,366,24" href="./journal/jnlist.html" target="_blank" alt="journal" />
   <area title="Interesting Tech" shape="circle"   coords="405,317,27" href="#" target="_blank" alt="tech"  />
@@ -133,6 +141,7 @@ h1 {
 <area title="BUILDING" shape="circle" coords="1040,70,37" href="building.html" target="_blank" alt="building" />
 <area title="BUILDING" shape="circle" coords="1120,20,13" href="building.html" target="_blank" alt="building" />                               
 </map>
+-->
 <!--<div id="list"><table><tr>Most favorite site:</tr>
  <tr><td><a href="www.baidu.com">Baidu</a></td></tr>
  <tr><td><a href="w3school.com">w3school</a></td></tr>
