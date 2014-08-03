@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<meta charset="gbk" ></meta>
+<head><title>新闻轮播</title>
+<style type="text/css">
+
+#body {    background:#528b8b;
+               background-attachment:fixed;
+               color:white;
+               font-size:20px;
+               height:80%;
+                text-align:center;         
+        }
+#imgarea {
+                        background:white;
+                        background-attachment:fixed;
+                        width:1034px;
+                        height:768px;
+                       margin-left:auto;
+                       margin-right:auto;
+                       border:1px solid #528b8b;
+                        
+              }
+#footer   {
+                     margin-bottom:auto;
+                     text-align:center;
+                     height:20%;
+             }
+</style>
+
+<script>
+function cngNewsImg(url, callback)
+{
+         var xmlhttp;
+
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            callback(url);
+        }
+    }
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+}
+
+
+var i = 0;
+var max_i = 7;
+
+
+function nextImg(y)
+{
+        var url = "./img/" + i + ".jpg";
+             function ur(url)
+       {
+                var div = document.getElementById("newsImg");
+                var img = div.getElementsByTagName("img");
+                if (img.length == 0) {
+                        img = document.createElement("img");
+                        while (div.childNodes.length > 0)
+                                div.removeChild(div.childNodes[0]);
+                        div.appendChild(img);
+                } else{
+                        img = img.item(0);
+                      }
+                img.src = url;
+              if(i==max_i){i=0;}else {i++;};
+                            
+                if(y) {setInterval("nextImg();",1000);}                 
+           
+        }
+        cngNewsImg(url,ur(url) );
+}
+function prevImg(y)
+{
+        var url = "./img/" + i + ".jpg";
+             function ur(url)
+       {
+                var div = document.getElementById("newsImg");
+                var img = div.getElementsByTagName("img");
+                if (img.length == 0) {
+                        img = document.createElement("img");
+                        while (div.childNodes.length > 0)
+                                div.removeChild(div.childNodes[0]);
+                        div.appendChild(img);
+                } else{
+                        img = img.item(0);
+                      }
+                img.src = url;
+              if(i==0){i=max_i;}else {i--;};
+                            
+                if(y) {setInterval("prevImg();",1000);}                 
+           
+        }
+        cngNewsImg(url,ur(url) );
+}
+    
+  function cngBgColor(){
+  document.getElementById("body").style.backgroundColor="rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
+}
+
+
+   
+
+</script>
+</head>
+<body>
+<div id="body">
+    <div id="imgarea">
+         
+         <div id="newsImg"></img></div>
+            
+      </div>
+           
+</div>
+<div id="footer">
+<button onclick="prevImg();cngBgColor();"><-</button>  
+<button onclick="prevImg(1);">play<-</button>
+<button onclick="nextImg(1);">play-></button>
+<button  onclick="nextImg();cngBgColor();">-></button>
+</div>
+</body>
+</html>
+
+
+
+
+
